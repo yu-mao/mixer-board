@@ -1,0 +1,12 @@
+Calle's    				Jiayao's				Github
+local change A	-------------------------> remote change A
+
+Calle shall do:
+git add .
+git commit -m "Calle addeed change A."
+git push
+
+Jiayao should do:
+git pull
+
+======================
