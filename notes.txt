@@ -2,12 +2,12 @@ Calle's    				Jiayao's				Github
 local change A	-------------------------> remote change A
 
 Calle shall do:
-git add .
-git commit -m "Calle addeed change A."
-git push
+>>> git add .
+>>> git commit -m "Calle addeed change A."
+>>> git push
 
 Jiayao should do:
-git pull
+>>> git pull
 
 ======================
 if error message "please commit your changes or stash them
@@ -15,13 +15,14 @@ if error message "please commit your changes or stash them
 
 one should do:
 (to save changes):
-git add .
-git commit -m "blah blah..."
-git push
+>>> git add .
+>>> git commit -m "blah blah..."
+>>> git push
 
 (to discard changes):
-git add .
-git stash
+>>> git add .
+>>> git stash
 
 then try again:
-git pull
+>>> git pull
+======================
