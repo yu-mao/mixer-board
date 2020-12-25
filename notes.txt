@@ -10,3 +10,18 @@ Jiayao should do:
 git pull
 
 ======================
+if error message "please commit your changes or stash them
+	before you merge."
+
+one should do:
+(to save changes):
+git add .
+git commit -m "blah blah..."
+git push
+
+(to discard changes):
+git add .
+git stash
+
+then try again:
+git pull
