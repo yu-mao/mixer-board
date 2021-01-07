@@ -20,8 +20,8 @@ int translate_button_press() {
 
 
 // function that implement the sound playing action
-void play_sound() {
-	sound_player = SoundPlayer(sound_files_path)
+void play_sound(index_pressed_button) {
+	sound_player.play_sound(index_pressed_button)
 
 }
 
