@@ -2,6 +2,8 @@
 
 int PIN_READING_VOLTAGE = A0;  //This selects A0 as the pin to read
 
+//arduino = serial.Serial('COM5', 115200, timeout=.1) //Arduino setup to send data to python
+
 int button_pressed[4] = {1, 2, 3, 4};  //This creates an array to call for what button is pressed
 int voltage_value = 0; //This sets an initial value for the integer which is later 
 //used to read the voltage on the pin
@@ -16,7 +18,7 @@ int VOLTAGE_RANGES[5] = {161, 197, 563, 722, 923}; //This are the ranges for eac
 //}
 
 void setup() {
-  Serial.begin(9600);
+  Serial.begin(115200);
   pinMode(PIN_READING_VOLTAGE, INPUT);
   Serial.println("...Arduino waking up...");
   voltage_value = 0;  //Does this have to be both in setup and beforehand?
@@ -51,5 +53,6 @@ void loop() {
     Serial.println("Button 4");
     }
     voltage_value_previous = voltage_value;
+    delay(100);
   }
 }
