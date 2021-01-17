@@ -15,6 +15,7 @@ example use:
 	>>> soundPlayer = SoundPlayer('COM5', 115200, 0.1)
 	>>> soundPlayer.read_arduino()
 """
+
 class SoundPlayer():
 	def __init__(self, com_port_number='COM5', 
 					   baud_rate=115200, 
@@ -24,12 +25,12 @@ class SoundPlayer():
 		self.button_pressed  = 0
 		self.sound_files_path = sound_files_path
 
-# TODO: detect button press CHANGE
+	# TODO: detect button press CHANGE
 	def read_arduino(self):
 		while True:
 			data_from_arduino = self.arduino.readline()[:-2]
 			if data_from_arduino:
-				button_pressed = (data_from_arduino[-1] + 2) % 10
+				button_pressed = (data_from_arduino[-1] + 2)-50 
 				if button_pressed != self.button_pressed:
 					self.button_pressed = button_pressed
 					print(self.button_pressed)
