@@ -1,0 +1,15 @@
+PC-end python program
+---
+Play the sound files asynchronousely
+so that the playing reacts to the button press change in real-time
+correct the pressed_button readings - currently using math hardcoding
+===
+
+Circuit-end hardware
+---
+Assign one button as Vanilla melody button; and assign the rest of buttons as beats button
+===
+
+Music
+---
+find more suitable sound files so that the mixed sound is harmonious
