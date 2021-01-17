@@ -4,8 +4,6 @@ import os
 
 import pygame
 import serial
-from playsound import playsound
-
 """
 Args:
 	comPortNumber(string)
@@ -42,7 +40,6 @@ class SoundPlayer():
 		for sound_file_name in sound_file_names:
 			if str(self.button_pressed) in sound_file_name:
 				sound_files_path = self.sound_files_path + sound_file_name
-				#playsound(sound_files_path)
 				pygame.init()
 				pygame.mixer.music.load(sound_files_path)
 				pygame.mixer.music.play(0)
