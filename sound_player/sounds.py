@@ -43,6 +43,10 @@ class SoundPlayer():
 				pygame.init()
 				pygame.mixer.music.load(sound_files_path)
 				pygame.mixer.music.play(0)
+				
+				# self.sound_player_1 = pygame.init()
+				# self.sound_player_1.mixer.music.load(sound_files_path)
+				# self.sound_player_1.mixer.music.play(0)		
 
 
 if __name__ == "__main__":
