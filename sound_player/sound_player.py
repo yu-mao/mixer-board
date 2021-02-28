@@ -41,6 +41,7 @@ class SoundPlayer():
 		for sound_file_name in sound_file_names:
 			if str(self.button_pressed) in sound_file_name:
 				sound_files_path = self.sound_files_path + sound_file_name
+				print(sound_files_path)
 				playsound(sound_files_path)
 
 
