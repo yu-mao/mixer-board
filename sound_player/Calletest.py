@@ -4,16 +4,12 @@ import serial
 import sys
 from playsound import playsound
 class SoundPlayer():
+	
+	#Initializing setup
 
-#Initializing setup
-
-	def __init__(self, com_port_number='COM5', 
-					   baud_rate=115200, 
-					   timeout=0.1,
-					   sound_files_path='./sound_files/'):
-		self.arduino = serial.Serial(com_port_number, baud_rate, timeout=timeout)
-		self.button_pressed  = 0
-		self.sound_files_path = sound_files_path
+	def __init__(self, com_port='COM5', baud_rate=115200, timeout=0.1):
+		self.arduino = serial.Serial('COM5', 115200, timeout=0.1)
+		self.button_pressed = 0
 
 #Reading arduino output
 
@@ -27,7 +23,6 @@ class SoundPlayer():
 						print(button_pressed)
 						self.player()
 					
-
 #Reads which button is pressed and plays the corresponding sound file
 
 	def player(self):
